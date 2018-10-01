@@ -1,19 +1,19 @@
 <template>
-    <div class="header">
-        <router-link class="wrap_left" :to="{name:'home'}">Stock Trader</router-link>
-        <router-link class="wrap_left" to="portfolio">Portfolio</router-link>
-        <router-link class="wrap_left" to="stocks">Stocks</router-link>
-        <div class="filler"></div>
-        <a class="wrap_right">Close Day</a>
-        <!-- TODO dropdown menu-->
-        <a class="wrap_right">Save & Load
-            <!-- <ul>
+  <div class="header">
+    <router-link class="wrap_left" :to="{name:'home'}">Stock Trader</router-link>
+    <router-link class="wrap_left" :to="{name:'portfolio'}">Portfolio</router-link>
+    <router-link class="wrap_left" :to="{name:'stocks'}">Stocks</router-link>
+    <div class="filler"></div>
+    <a class="wrap_right">Close Day</a>
+    <!-- TODO dropdown menu-->
+    <a class="wrap_right">Save & Load
+      <!-- <ul>
                         <router-link tag=li to="load">Load</router-link>
                         <router-link tag=li to="save">Save</router-link>
                     </ul> -->
-        </a>
-        <a class="wrap_right">Funds: {{funds}}</a>
-    </div>
+    </a>
+    <a class="wrap_right">Funds: {{funds}}</a>
+  </div>
 </template>
 
 <script>

@@ -4,13 +4,13 @@
         <p>You may load & save your data</p>
         <p>Click on 'Close Day' to begin a new trading day!</p>
         <hr>
-        <p>Your funds: {{funds}}</p>
+        <p>Your funds: {{appUser.funds}}</p>
     </div>
 </template>
 
 <script>
 export default {
-  props: ["funds"]
+  props: ["appUser"]
 };
 </script>
 

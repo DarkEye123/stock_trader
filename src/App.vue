@@ -5,18 +5,18 @@
     </div>
 
     <div class="body">
-      <router-view :funds="appUser.funds"></router-view>
+      <router-view :appUser="appUser"></router-view>
     </div>
   </div>
 </template>
 
 <script>
 import Header from "./components/Header";
-import { fetch_data } from "./models/user";
+import { fetchData } from "./models/user";
 export default {
   data() {
     return {
-      appUser: fetch_data()
+      appUser: fetchData()
     };
   },
   components: {
@@ -28,7 +28,6 @@ export default {
 <style>
 .container {
   display: grid;
-  /* grid-template: 40px minmax(200px, auto-fit) / repeat(12, 1fr); */
   grid-template: 40px 1fr / repeat(12, 1fr);
 }
 
