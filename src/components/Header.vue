@@ -4,7 +4,7 @@
     <router-link class="wrap_left" :to="{name:'portfolio'}">Portfolio</router-link>
     <router-link class="wrap_left" :to="{name:'stocks'}">Stocks</router-link>
     <div class="filler"></div>
-    <a class="wrap_right">Close Day</a>
+    <a class="wrap_right" @click="$emit('closeDayEvent')">Close Day</a>
     <!-- TODO dropdown menu-->
     <a class="wrap_right">Save & Load
       <!-- <ul>
@@ -23,6 +23,10 @@ export default {
 </script>
 
 <style scoped>
+a {
+  cursor: pointer;
+}
+
 .header {
   display: flex;
 }

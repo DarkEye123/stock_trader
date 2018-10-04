@@ -6,9 +6,8 @@
 
 <script>
 import Card from "./common/Card.vue";
-import { fetchStocks } from "../models/stock.js";
+import { fetchStocks, getStock } from "../actions/stocks.js";
 import { computeFinalPrice } from "../common.js";
-import { getStock } from "../common.js";
 export default {
   props: ["appUser"],
   data() {

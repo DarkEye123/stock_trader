@@ -9,10 +9,3 @@ export class User {
         this.portfolio = new Portfolio();
     }
 }
-
-export function fetchData() {
-    return new User(
-        "Matej",
-        10000
-    );
-}

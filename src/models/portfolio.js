@@ -3,9 +3,13 @@ import {
 } from './stock';
 
 import {
-    getStock,
     getValidNumber
 } from "../common.js";
+
+import {
+    getStock
+} from '../actions/stocks';
+
 export class Portfolio {
     constructor() {
         this.stocks = [];

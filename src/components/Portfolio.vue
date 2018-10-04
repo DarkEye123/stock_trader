@@ -6,7 +6,7 @@
 
 <script>
 import Card from "./common/Card";
-import { syncUserStockData } from "../models/stock.js";
+import { syncUserStockData } from "../actions/stocks.js";
 import { computeFinalPrice } from "../common.js";
 export default {
   props: ["appUser"],

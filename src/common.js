@@ -15,7 +15,3 @@ export function computeFinalPrice(stock, quantity) {
     quantity = getValidNumber(quantity);
     return quantity * price;
 }
-
-export function getStock(stocks, stock) {
-    return stocks.find(s => s.name === stock.name);
-}

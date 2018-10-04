@@ -1,7 +1,7 @@
 <template>
   <div id="app" class="container">
     <div class="header">
-      <appHeader :funds="appUser.funds"></appHeader>
+      <appHeader :funds="appUser.funds" @closeDayEvent="closeDay"></appHeader>
     </div>
 
     <div class="body">
@@ -12,7 +12,7 @@
 
 <script>
 import Header from "./components/Header";
-import { fetchData } from "./models/user";
+import { fetchData } from "./actions/users";
 export default {
   data() {
     return {
@@ -21,6 +21,11 @@ export default {
   },
   components: {
     appHeader: Header
+  },
+  methods: {
+    closeDay() {
+      console.log("making it happen");
+    }
   }
 };
 </script>
