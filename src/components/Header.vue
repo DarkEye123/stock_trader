@@ -6,12 +6,12 @@
     <div class="filler"></div>
     <a class="wrap_right" @click="$emit('closeDayEvent')">Close Day</a>
     <!-- TODO dropdown menu-->
-    <a class="wrap_right">Save & Load
-      <!-- <ul>
-                        <router-link tag=li to="load">Load</router-link>
-                        <router-link tag=li to="save">Save</router-link>
-                    </ul> -->
-    </a>
+    <sui-dropdown class="teal wrap_right" floating text="Save & Load">
+      <sui-dropdown-menu>
+        <sui-dropdown-item>Save</sui-dropdown-item>
+        <sui-dropdown-item>Load</sui-dropdown-item>
+      </sui-dropdown-menu>
+    </sui-dropdown>
     <a class="wrap_right">Funds: {{funds}}</a>
   </div>
 </template>

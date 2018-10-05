@@ -8,3 +8,11 @@ export function fetchData() {
         10000
     );
 }
+
+export function generateId(size = 16) {
+    let id = Math.random().toString(10).substring(2);
+    if (id.length < size) {
+        id += "0".repeat(size - id.length);
+    }
+    return id;
+}

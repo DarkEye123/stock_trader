@@ -13,6 +13,7 @@
 <script>
 import Header from "./components/Header";
 import { fetchData } from "./actions/users";
+import { simulate } from "./actions/stocks";
 export default {
   data() {
     return {
@@ -25,6 +26,7 @@ export default {
   methods: {
     closeDay() {
       console.log("making it happen");
+      simulate();
     }
   }
 };
