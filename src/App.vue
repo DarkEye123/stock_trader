@@ -1,7 +1,7 @@
 <template>
   <div id="app" class="container">
     <div class="header">
-      <appHeader :funds="appUser.funds" @closeDayEvent="closeDay"></appHeader>
+      <appHeader :appUser="appUser" @closeDayEvent="closeDay"></appHeader>
     </div>
 
     <div class="body">
@@ -32,7 +32,7 @@ export default {
 };
 </script>
 
-<style>
+<style scopped>
 .container {
   display: grid;
   grid-template: 40px 1fr / repeat(12, 1fr);

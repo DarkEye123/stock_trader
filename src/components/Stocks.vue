@@ -1,5 +1,5 @@
 <template>
-  <div class="stocks-body">
+  <div class="container">
     <stock-card v-for="(stock, index) in stocks" :key="index" :stock="stock" :actionCallback="buy" :buttonLabel="'buy'"></stock-card>
   </div>
 </template>
@@ -33,4 +33,18 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+.container {
+  display: grid;
+  grid-template: repeat(2, 100px) / repeat(2, 1fr);
+}
+@media only screen and (max-width: 440px) {
+  .container {
+    grid-auto-rows: 100px;
+    grid-template: repeat(2, 100px) / repeat(1, 1fr);
+  }
+}
+</style>
+
 

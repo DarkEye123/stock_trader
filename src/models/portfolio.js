@@ -38,4 +38,12 @@ export class Portfolio {
             return quantity;
         }
     }
+
+    serialize() {
+        return JSON.stringify(this.stocks);
+    }
+
+    deserialize(stocks) {
+        this.stocks = JSON.parse(stocks);
+    }
 }
