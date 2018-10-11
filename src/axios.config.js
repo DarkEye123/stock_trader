@@ -1,4 +1,4 @@
 import axios from 'axios';
 
 axios.defaults.baseURL = 'https://stock-trader-demo-b690d.firebaseio.com/';
-axios.defaults.timeout = 1000;
+axios.defaults.timeout = 5000;

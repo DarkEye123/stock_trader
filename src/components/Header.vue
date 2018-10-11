@@ -17,34 +17,16 @@
 </template>
 
 <script>
+import { saveUser } from "../actions/users.js";
+import { loadUser } from "../actions/users.js";
 export default {
   props: ["appUser"],
   methods: {
     save() {
-      this.$http
-        .put(`${this.appUser.id}.json`, {
-          portfolio: this.appUser.portfolio.serialize(),
-          funds: this.appUser.funds
-        })
-        .then(function(response) {
-          console.log(response);
-        })
-        .catch(function(error) {
-          console.log(error);
-        });
+      saveUser(this.$http, this.appUser);
     },
     load() {
-      this.$http
-        .get(`${this.appUser.id}.json`)
-        // if function(response) is used 'this' keyword is undefined
-        .then(response => {
-          console.log(response.data);
-          this.appUser.portfolio.deserialize(response.data["portfolio"]);
-          this.appUser.funds = response.data["funds"];
-        })
-        .catch(function(error) {
-          console.log(error);
-        });
+      loadUser(this.$http, this.appUser);
     }
   }
 };
