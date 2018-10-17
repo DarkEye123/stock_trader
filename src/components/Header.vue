@@ -1,10 +1,11 @@
 <template>
-  <div class="wrapper">
-    <router-link class="wrap_left" :to="{name:'home'}">Stock Trader</router-link>
-    <router-link class="wrap_left" :to="{name:'portfolio'}">Portfolio</router-link>
-    <router-link class="wrap_left" :to="{name:'stocks'}">Stocks</router-link>
-    <div class="filler"></div>
-    <a class="wrap_right" @click="$emit('closeDayEvent')">Close Day</a>
+  <header>
+    <div></div>
+    <router-link :to="{name:'home'}">Stock Trader</router-link>
+    <router-link :to="{name:'portfolio'}">Portfolio</router-link>
+    <router-link :to="{name:'stocks'}">Stocks</router-link>
+    <div></div>
+    <a @click="$emit('closeDayEvent')">Close Day</a>
     <!-- TODO dropdown menu-->
     <sui-dropdown class="teal wrap_right dropdown pointing" floating text="Save & Load">
       <sui-dropdown-menu>
@@ -13,7 +14,8 @@
       </sui-dropdown-menu>
     </sui-dropdown>
     <a class="wrap_right">Funds: {{appUser.funds}}</a>
-  </div>
+    <div></div>
+  </header>
 </template>
 
 <script>
@@ -33,39 +35,28 @@ export default {
 </script>
 
 <style scoped>
+header {
+  display: grid;
+  grid-template: 1fr / 10px auto auto auto 1fr auto auto auto 10px;
+  column-gap: 2rem;
+  background-color: #55d6aa;
+}
+
 a {
   cursor: pointer;
 }
 
-.wrapper {
-  display: flex;
-  background-color: #55d6aa;
-  height: 100%;
-  top: 0;
-}
-
-.filler {
-  margin-left: auto;
-}
-
-.wrap_left {
-  margin-left: 20px;
-}
-
-.wrap_right {
-  margin-right: 20px;
-}
-
-.wrapper > a,
-.wrapper > div {
+header > a,
+header > div {
   text-transform: uppercase;
   color: #444;
   padding-top: 10px;
+  padding-bottom: 10px;
   position: relative;
 }
 
-.wrapper > a::before,
-.wrapper > .dropdown::before {
+header > a::before,
+header > .dropdown::before {
   content: "";
   height: 5px;
   width: 0%;
@@ -76,8 +67,8 @@ a {
   transition: all ease-in-out 250ms;
 }
 
-.wrapper a:hover::before,
-.wrapper div:hover::before {
+header a:hover::before,
+header div:hover::before {
   width: 100%;
 }
 </style>

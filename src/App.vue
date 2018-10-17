@@ -1,11 +1,9 @@
 <template>
-  <div id="app" class="container">
-    <div class="header">
-      <appHeader :appUser="appUser" @closeDayEvent="closeDay"></appHeader>
-    </div>
+  <div id="app">
+    <appHeader :appUser="appUser" @closeDayEvent="closeDay"></appHeader>
 
-    <div class="body">
-      <router-view :appUser="appUser"></router-view>
+    <div class="container">
+      <router-view class="body" :appUser="appUser"></router-view>
     </div>
   </div>
 </template>
@@ -35,11 +33,7 @@ export default {
 <style>
 .container {
   display: grid;
-  grid-template: 40px 1fr / repeat(12, 1fr);
-}
-
-.header {
-  grid-column: 1/-1;
+  grid-template: 1fr / repeat(12, 1fr);
 }
 
 .body {
