@@ -36,13 +36,13 @@ export default {
 
 <style scoped>
 .container {
-  display: grid;
+  /* display: grid; */
   grid-template: repeat(2, 100px) / repeat(2, 1fr);
 }
 @media only screen and (max-width: 440px) {
   .container {
     grid-auto-rows: 100px;
-    grid-template: repeat(2, 100px) / repeat(1, 1fr);
+    grid-template: repeat(2, 100px) / 1fr;
   }
 }
 </style>

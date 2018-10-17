@@ -38,6 +38,8 @@ export default {
 
 .body {
   grid-column: 2/-2;
+  justify-self: center;
+  column-gap: 1em;
 }
 </style>
 
