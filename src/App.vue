@@ -32,7 +32,7 @@ export default {
 };
 </script>
 
-<style scopped>
+<style>
 .container {
   display: grid;
   grid-template: 40px 1fr / repeat(12, 1fr);
