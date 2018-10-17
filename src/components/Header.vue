@@ -1,6 +1,9 @@
 <template>
   <div class="header">
-    <router-link class="wrap_left test" tag="div" :to="{name:'home'}"><a>Stock Trader</a></router-link>
+    <!-- <div>
+      <router-link class="wrap_left" :to="{name:'home'}">Stock Trader</router-link>
+    </div> -->
+    <router-link class="wrap_left" :to="{name:'home'}">Stock Trader</router-link>
     <router-link class="wrap_left" :to="{name:'portfolio'}">Portfolio</router-link>
     <router-link class="wrap_left" :to="{name:'stocks'}">Stocks</router-link>
     <div class="filler"></div>
@@ -41,6 +44,8 @@ a {
   display: flex;
   background-color: #55d6aa;
   height: 100%;
+  position: absolute;
+  top: 0;
 }
 
 .filler {
@@ -49,38 +54,56 @@ a {
 
 .wrap_left {
   margin-left: 20px;
-  position: relative;
-}
-
-.test {
-  background-color: red;
+  /* position: relative; */
 }
 
 .wrap_right {
   margin-right: 20px;
+  /* position: relative; */
+}
+
+/* .header div {
+  background-color: red;
+} */
+
+.header > a,
+.header > div {
+  text-transform: uppercase;
+  color: #444;
+  padding-top: 5px;
   position: relative;
 }
 
-.header a, .header div {
-  text-transform: uppercase;
-  color: #444;
-}
-
-.header a::before, .header .dropdown::before {
-  content: '';
+.header > a::before,
+.header > .dropdown::before {
+  content: "";
   height: 5px;
   width: 0%;
   display: block;
   position: absolute;
-  top:0;
-  bottom: 0;
-  background-color:#444;
+  top: 0;
+  background-color: #444;
   transition: all ease-in-out 250ms;
 }
 
-.header a:hover::before, .header div:hover::before {
+/* .header > div::before {
+  content: "";
+  height: 5px;
+  width: 0%;
+  display: block;
+  position: absolute;
+  top: 0;
+  background-color: #444;
+  transition: all ease-in-out 250ms;
+} */
+
+/* .header > div:hover::before {
+  width: 100%;
+} */
+
+.header a:hover::before,
+.header div:hover::before {
   width: 100%;
 }
-
 </style>
 
